@@ -8,7 +8,13 @@ cask "nocx" do
   homepage "https://github.com/shady2k/nocx"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  # The SYMBOL form is a minimum, not an equality: `depends_on macos: :sonoma`
+  # means Sonoma or newer. The string form this replaced (`">= :sonoma"`) still
+  # works, but Homebrew warns on it on every install - "Calling string comparison
+  # format for depends_on macos: is deprecated!" - which is the first thing a
+  # person sees when they run `brew install --cask shady2k/nocx/nocx`
+  # (nocx-1ebrs.12, found on the 0.6.0 clean-Mac pass).
+  depends_on macos: :sonoma
 
   app "nocx.app"
 
