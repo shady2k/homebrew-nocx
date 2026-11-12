@@ -1,6 +1,6 @@
 cask "nocx" do
-  version "0.8.0"
-  sha256 "df041c5d69ec02be6fdacb7ccdb021aa5b6c52e38f8cccf3e0961a6ea09aeea9"
+  version "0.8.1"
+  sha256 "673a28e8d154a74670d82156c47b9a1682c39646511efec92bac1815f61bc06b"
 
   url "https://github.com/shady2k/nocx/releases/download/v#{version}/nocx-#{version}-darwin-universal.zip"
   name "nocx"
